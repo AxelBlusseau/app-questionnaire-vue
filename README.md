@@ -27,3 +27,9 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Rendu fin de journée du 23/10/2019
+Installation de vuetify -> echec
+Installation de BootstrapVue -> succes 
+Création du formulaire de profil
+Installation de PouchDB
