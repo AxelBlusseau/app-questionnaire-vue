@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <FormProfil />
   </div>
 </template>

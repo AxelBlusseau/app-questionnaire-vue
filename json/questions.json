@@ -1,0 +1,34 @@
+{
+    "questions": [
+        {
+            "question": "Êtes-vous stylé ?",
+            "reponses": [
+                    "Oui",
+                    "Non",
+                    "Bof",
+                    "Axel" 
+            ],
+            "reponse": ["Axel", "Bof"]
+        },
+        {
+            "question": "Êtes-vous rigolo ?",
+            "reponses": [
+                    "Oui",
+                    "Non",
+                    "Bof",
+                    "Axel"
+            ],
+            "reponse": ["Oui"]
+        },
+        {
+            "question": "Aimez vous le Vuejs ?",
+            "reponses": [
+                    "Oui",
+                    "Non",
+                    "Bof",
+                    "Axel"
+            ],
+            "reponse": ["Bof"]
+        }
+    ]
+}

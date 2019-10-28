@@ -29,7 +29,6 @@
             placeholder="Entrez le nom de votre société"
           ></b-form-input>
         </b-form-group>
-
         <b-button type="submit" variant="primary">Submit</b-button>
         <b-button type="reset" variant="danger">Reset</b-button>
       </b-form>
@@ -58,18 +57,29 @@ export default {
 
       var db = new PouchDB("test");
 
+      var today = new Date();
+      var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+      var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      var dateTime = date+time;
+
       db.put({
-        _id: "test",
+        _id: this.form.nom + dateTime,
         nom: this.form.nom,
         prenom: this.form.prenom,
         nomSociete: this.form.nomSociete
       });
-/*
+
       db.get("test").then(function(doc){
-        console.log(doc)
+        console.log(doc._rev)
+        const data = { 
+          id: doc._rev
+        }
+        window.localStorage.setItem('idUser', JSON.stringify(data))
       })
-*/
+
       db.replicate.to("http://127.0.0.1:5984/test");
+
+      this.$router.push('survey')
     },
     onReset(evt) {
       evt.preventDefault();

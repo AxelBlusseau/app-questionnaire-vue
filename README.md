@@ -38,6 +38,14 @@ Installation de PouchDB
 Faire fonctionner pouchdb
 Insérer un utilisteur dans pouchdb
 Réussir à afficher une questionnette
+Utiliser un composant pour afficher les questions
+
+### Rendu fni de journée du 28/10/2019
+PouchDB opérationnel
+Gestion des utilisateur et des questions opérationnel
+Gestion des scores opérationnel
+
+
 
 
 
