@@ -33,3 +33,11 @@ Installation de vuetify -> echec
 Installation de BootstrapVue -> succes 
 Création du formulaire de profil
 Installation de PouchDB
+
+### Objectif de la journée du 28/10/2019
+Faire fonctionner pouchdb
+Insérer un utilisteur dans pouchdb
+Réussir à afficher une questionnette
+
+
+
