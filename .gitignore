@@ -1,6 +1,10 @@
 .DS_Store
 node_modules
 /dist
+_replicator/LOCK
+_users/LOCK
+pouch__all_dbs__/LOCK
+test/LOCK
 
 # local env files
 .env.local
