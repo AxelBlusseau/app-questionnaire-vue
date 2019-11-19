@@ -1,8 +1,10 @@
 <template>
   <b-container>
-    <div>
-      <b-form @submit="onSubmit" @reset="onReset" v-if="show">
-        <b-form-group id="input-group-1" label="Votre Nom :" label-for="input-1">
+    <b-row style="margin-top:10%">
+      <b-col></b-col>
+      <b-col cols="8">
+      <b-form @submit="ABonSubmit" @reset="ABonReset" v-if="show">
+        <b-form-group id="input-group-1" label="Nom" label-for="input-1">
           <b-form-input
             id="input-1"
             v-model="form.nom"
@@ -10,9 +12,8 @@
             required
             placeholder="Entrez votre nom"
           ></b-form-input>
-        </b-form-group>
-
-        <b-form-group id="input-group-2" label="Votre Prénom :" label-for="input-2">
+        </b-form-group>        
+        <b-form-group id="input-group-2" label="Prénom" label-for="input-2">
           <b-form-input
             id="input-2"
             v-model="form.prenom"
@@ -21,7 +22,7 @@
           ></b-form-input>
         </b-form-group>
 
-        <b-form-group id="input-group-3" label="Le nom de votre société :" label-for="input-3">
+        <b-form-group id="input-group-3" label="Société" label-for="input-3">
           <b-form-input
             id="input-3"
             v-model="form.nomSociete"
@@ -29,10 +30,19 @@
             placeholder="Entrez le nom de votre société"
           ></b-form-input>
         </b-form-group>
-        <b-button type="submit" variant="primary">Submit</b-button>
-        <b-button type="reset" variant="danger">Reset</b-button>
+        <b-row>
+          <b-col>
+          <b-button type="submit" block variant="primary">Commencer le Test</b-button>
+          </b-col>
+          <b-col>
+          <b-button type="reset" block variant="danger">Vider</b-button>
+          </b-col>
+        </b-row>
       </b-form>
-    </div>
+      </b-col>
+    <b-col>
+    </b-col>
+    </b-row>
   </b-container>
 </template>
 
@@ -51,26 +61,27 @@ export default {
     };
   },
   methods: {
-    onSubmit(evt) {
+    ABonSubmit(evt) {
       evt.preventDefault();
-      alert(JSON.stringify(this.form));
 
-      var db = new PouchDB("test");
+      var db = new PouchDB("questionnaire");
 
+      //Génération de la date pour obtenir un id unique
       var today = new Date();
       var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
       var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
       var dateTime = date+time;
 
+      //On envoi en base de données l'utilisateur
       db.put({
-        _id: this.form.nom + dateTime,
+        _id: this.form.nomSociete + dateTime,
         nom: this.form.nom,
         prenom: this.form.prenom,
         nomSociete: this.form.nomSociete
       });
 
-      db.get("test").then(function(doc){
-        console.log(doc._rev)
+      //Récupération du dernier ID enregistré, et mise en session de celui ci
+      db.get("questionnaire").then(function(doc){
         const data = { 
           id: doc._rev
         }
@@ -79,15 +90,14 @@ export default {
 
       db.replicate.to("http://127.0.0.1:5984/test");
 
-      this.$router.push('survey')
+      this.$router.push('questionnaire') 
     },
-    onReset(evt) {
+    ABonReset(evt) {
       evt.preventDefault();
-      // Reset our form values
+      //On reset nos valeurs
       this.form.nom = "";
       this.form.prenom = "";
       this.form.nomSociete = "";
-      // Trick to reset/clear native browser form validation state
       this.show = false;
       this.$nextTick(() => {
         this.show = true;

@@ -1,40 +1,44 @@
 <template>
   <div class="home">
-    <DisplaySurvey :listQuestions="oui" />
+    <DisplaySurvey :listQuestions="questions" /> <!-- Je feed mon composant avec les questions que j'ai générées -->
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 
-import DisplaySurvey from "@/components/DisplaySurvey.vue";
-import QuestionJson from "../../json/questions.json";
+import DisplaySurvey from "@/components/ABDisplaySurvey.vue"; //J'importe le composant qui gère l'afficheage des questions
+import QuestionJson from "../../json/questions.json"; //J'importe le fichier json où sont stockées mes questions
 
 export default {
   data() {
     return {
-      oui: [],
+      questions: [],
       show: true
     };
   },
   created: function() {
-    //Lancer des methodes au moment ou la page se charge (le plus souvent ce sont des apl api)
-    this.getQuestions();
+    //Lancer des methodes au moment ou la page se charge (le plus souvent ce sont des appels api)
+    this.ABgetQuestions();
   },
   methods: {
     //Génération aléatoire des questions
-    getQuestions: function() {
+    ABshuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    },
+    //On prend les questions est ont les tries aléatoirement pour les renvoyer au composant
+    ABgetQuestions: function() {
       var count = Object.keys(QuestionJson["questions"]).length;
-      console.log(count);
-      //var item = QuestionJson["questions"][Math.floor(Math.random()*QuestionJson["questions"].length)];
-      //console.log(item)
-      for (var k in QuestionJson["questions"]) {
-        this.oui.push(QuestionJson["questions"][k]);
+      this.ABshuffleArray(QuestionJson["questions"])
+      for (var k in QuestionJson["questions"]){
+        this.questions.push(QuestionJson["questions"][k]);
       }
     }
   },
 
-  name: "survey",
+  name: "questionnaire",
   components: {
     DisplaySurvey
   }

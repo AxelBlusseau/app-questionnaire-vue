@@ -1,34 +1,94 @@
 {
     "questions": [
         {
-            "question": "Êtes-vous stylé ?",
+            "question": "Secours – En cas d’accident, les salariés doivent :",
             "reponses": [
-                    "Oui",
-                    "Non",
-                    "Bof",
-                    "Axel" 
+                    "Connaître la conduite à tenir",
+                    "Tous être formés sauveteurs secouristes du travail (SST)",
+                    "Partir le plus vite possible"
             ],
-            "reponse": ["Axel", "Bof"]
+            "reponse": ["Connaître la conduite à tenir"]
         },
         {
-            "question": "Êtes-vous rigolo ?",
+            "question": "Sanitaires – Cochez l’affirmation exacte :",
             "reponses": [
-                    "Oui",
-                    "Non",
-                    "Bof",
-                    "Axel"
+                    "Le chef d’entreprise doit toujours s’assurer que les salariés disposent de sanitaires sur le chantier ou à proximité",
+                    "Il n’y a pas besoin de sanitaires pour un chantier d’une durée inférieure à une journée",
+                    "Un sanitaire pour 30 hommes est suffisant"
             ],
-            "reponse": ["Oui"]
+            "reponse": ["Le chef d’entreprise doit toujours s’assurer que les salariés disposent de sanitaires sur le chantier ou à proximité"]
         },
         {
-            "question": "Aimez vous le Vuejs ?",
+            "question": "Circulations sur le chantier – Sur un chantier :",
             "reponses": [
-                    "Oui",
-                    "Non",
-                    "Bof",
-                    "Axel"
+                    "Les salariés doivent être formés à leur arrivée pour emprunter les chemins aménagés",
+                    "La priorité est aux engins et aux véhicules",
+                    "Si une circulation identifiée est encombrée, les salariés connaissent le chantier, il n’est pas nécessaire d’identifier les voies de circulation"
             ],
-            "reponse": ["Bof"]
+            "reponse": ["Les salariés doivent être formés à leur arrivée pour emprunter les chemins aménagés", "La priorité est aux engins et aux véhicules"]
+        },
+        {
+            "question": "Suivi médical – Un salarié affecté à un poste présentant des risques particuliers pour sa santé et sa sécurité :",
+            "reponses": [
+                    "Bénéficie d’un suivi individuel renforcé (SIR)",
+                    "Sera suivi tous les ans par un médecin du travail ou un professionnel de santé",
+                    "Doit effectuer sa visite dans les 3 mois après l’embauche"
+            ],
+            "reponse": ["Bénéficie d’un suivi individuel renforcé (SIR)", "Sera suivi tous les ans par un médecin du travail ou un professionnel de santé"]
+        },
+        {
+            "question": "Formation à la sécurité – La formation à la sécurité concerne :",
+            "reponses": [
+                    "Seulement les salariés nouvellement embauchés",
+                    "Seulement les intérimaires",
+                    "Tous les salariés, y compris les intérimaires et les apprentis"
+            ],
+            "reponse": ["Tous les salariés, y compris les intérimaires et les apprentis"]
+        },
+        {
+            "question": "Autorisation de conduite – Pour qu’un salarié puisse conduire un engin de chantier :",
+            "reponses": [
+                    "Il doit disposer du permis approprié",
+                    "Il doit seulement être formé",
+                    "Le chef d’entreprise doit vérifier qu’il est formé et testé, qu’il est médicalement apte et lui délivrer l’autorisation de conduite adaptée"
+            ],
+            "reponse": ["Le chef d’entreprise doit vérifier qu’il est formé et testé, qu’il est médicalement apte et lui délivrer l’autorisation de conduite adaptée"]
+        },
+        {
+            "question": "Équipement de protection individuelle (EPI) – À l’arrivée du salarié, le chef d’entreprise lui fournit :",
+            "reponses": [
+                    "Les EPI que le salarié lui demande en fonction des besoins",
+                    "Des EPI adaptés à son poste de travail (casque, lunettes, chaussures, vêtements de travail, harnais, etc.)",
+                    "C’est à lui de venir avec ses propres EPI"
+            ],
+            "reponse": ["Des EPI adaptés à son poste de travail (casque, lunettes, chaussures, vêtements de travail, harnais, etc.)"]
+        },
+        {
+            "question": "Embauche d’un apprenti sur un poste de chantier/atelier :",
+            "reponses": [
+                    "Le document unique de l’entreprise doit être mis à jour",
+                    "L’apprenti n’a pas besoin d’accueil, il connaît déjà son métier",
+                    "Les apprentis peuvent exercer les mêmes activités que les autres salariés"
+            ],
+            "reponse": ["Le document unique de l’entreprise doit être mis à jour", "Les apprentis peuvent exercer les mêmes activités que les autres salariés"]
+        },
+        {
+            "question": "Habilitation électrique – Lors de l’embauche d’un salarié électricien :",
+            "reponses": [
+                    "Celui-ci a forcément une habilitation électrique en tant qu’électricien",
+                    "Il convient de vérifier ses compétences et de lui délivrer une habilitation électrique",
+                    "Il faut voir comment il travaille avant de lui donner une habilitation électrique"
+            ],
+            "reponse": ["Celui-ci a forcément une habilitation électrique en tant qu’électricien", "Il convient de vérifier ses compétences et de lui délivrer une habilitation électrique"]
+        },
+        {
+            "question": "Entretien du véhicule :",
+            "reponses": [
+                    "Le salarié doit entretenir le véhicule de l’entreprise",
+                    "Le chef d’entreprise ne peut demander son permis à un salarié qu’à l’embauche",
+                    "Le chef d’entreprise doit s’assurer que les véhicules de l’entreprise sont révisés régulièrement"
+            ],
+            "reponse": ["Le chef d’entreprise doit s’assurer que les véhicules de l’entreprise sont révisés régulièrement"]
         }
     ]
 }

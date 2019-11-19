@@ -45,6 +45,18 @@ PouchDB opérationnel
 Gestion des utilisateur et des questions opérationnel
 Gestion des scores opérationnel
 
+### Objectif de la journée du 19/11/2019
+Commenter le code
+Rendre les questions aléatoires
+Faire l'interface administrateur
+
+
+### Rendu fni de journée du 19/11/2019
+Code commenté
+Fonction/Composant renomés 
+Question aléatoire
+Echec de la réalisation de l'interface administrateur
+
 
 
 
