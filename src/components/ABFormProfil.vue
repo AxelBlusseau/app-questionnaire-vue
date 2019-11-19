@@ -88,7 +88,7 @@ export default {
         window.localStorage.setItem('idUser', JSON.stringify(data))
       })
 
-      db.replicate.to("http://127.0.0.1:5984/test");
+      db.replicate.to("http://127.0.0.1:5984/questionnaire");
 
       this.$router.push('questionnaire') 
     },
