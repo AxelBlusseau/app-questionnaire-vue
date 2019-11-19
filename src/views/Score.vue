@@ -1,8 +1,12 @@
 <template>
   <div class="about" style="margin-top:10%">
-    <h3>Score :</h3>
-    <span style="font-size:100px">{{ userScore }}</span>pts
-    
+    <div v-if="userScore" >
+      <h3>Score :</h3>
+      <span style="font-size:100px">{{ userScore }}</span>pts 
+    </div>   
+    <div v-else>
+      <h3>Vous n'avez pas encore répondu au quizz !</h3>
+    </div>   
   </div>
 </template>
 <script>
