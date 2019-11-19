@@ -79,10 +79,7 @@ import PouchDB from "pouchdb";
         if (!this.checkFormValidity()) {
           return
         }
-
-      console.log(this.userName)
-      console.log(this.userPwd)
-
+        
       var db = new PouchDB("questionnaire"); //On récupère la bdd
 
       db.find({

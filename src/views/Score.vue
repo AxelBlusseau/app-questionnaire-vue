@@ -1,12 +1,13 @@
 <template>
   <div class="about" style="margin-top:10%">
-    <div v-if="userScore" >
+    <div v-if="userScore >= 0">
       <h3>Score :</h3>
       <span style="font-size:100px">{{ userScore }}</span>pts 
     </div>   
     <div v-else>
       <h3>Vous n'avez pas encore répondu au quizz !</h3>
-    </div>   
+    </div>  
+    <b-button href="/" class="primary">Revenir à la page d'accueil</b-button>
   </div>
 </template>
 <script>
