@@ -57,7 +57,7 @@ Fonction/Composant renomés
 Question aléatoire
 Echec de la réalisation de l'interface administrateur
 
-
+Lien de l'application : https://axelblusseau.github.io/
 
 
 
